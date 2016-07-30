@@ -3,9 +3,9 @@
 open System
 open System.Text.RegularExpressions
 
-let IsAllCaps (s:string) = String.Equals( s, s.ToUpper())
-
 let IsEmpty (s:string) = String.IsNullOrWhiteSpace(s)
+
+let IsAllCaps (s:string) = String.Equals( s, s.ToUpper())
 
 let IsAllNumbers (s:string) =
     let rgx = new Regex(@"[\s,?!]")
@@ -18,8 +18,6 @@ let IsExclaimation (s:string) : bool =
 
 let IsQuestion (s:string) = 
     s.EndsWith("?") && not (IsExclaimation s)
-
-
 
 type Bob( phrase : string ) = 
     let sut = phrase.Trim()
