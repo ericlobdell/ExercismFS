@@ -60,6 +60,8 @@
     <Content Include="packages.config" />
     <Compile Include="SumOfMultiplesTests.fs" />
     <Compile Include="DiffOfSquaresTests.fs" />
+    <Compile Include="SpaceAgeTests.fs" />
+    <Compile Include="TriangleTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ExercismFS\ExercismFS.fsproj">

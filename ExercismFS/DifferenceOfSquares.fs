@@ -8,7 +8,6 @@ let squareOfSums n =
 let sumOfSquares n =
     [1..n] |> List.map square |> List.sum
 
-
 let difference n =
     (squareOfSums n) - (sumOfSquares n)
 
