@@ -20,7 +20,8 @@ let noSidesEqual a b c =
     a <> b && b <> c && a <> c
 
 let isValidTriangle (a: decimal) (b: decimal) (c: decimal) =
-    allSidesPositiveNumber a b c && meetsTriangleInequalityRules a b c
+    allSidesPositiveNumber a b c && 
+    meetsTriangleInequalityRules a b c
 
 let kind (a: decimal) (b: decimal) (c: decimal) =
     if isValidTriangle a b c then

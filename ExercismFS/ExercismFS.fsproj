@@ -57,6 +57,7 @@
     <Compile Include="DifferenceOfSquares.fs" />
     <Compile Include="SpaceAge.fs" />
     <Compile Include="Triangle.fs" />
+    <Compile Include="BeerSong.fs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Choose>

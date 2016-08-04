@@ -62,6 +62,7 @@
     <Compile Include="DiffOfSquaresTests.fs" />
     <Compile Include="SpaceAgeTests.fs" />
     <Compile Include="TriangleTests.fs" />
+    <Compile Include="BeerSongTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ExercismFS\ExercismFS.fsproj">
