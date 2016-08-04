@@ -7,8 +7,7 @@ let getLineEnding lineNumber =
     | n when n = 1 -> "no more bottles of beer on the wall"
     | _ -> sprintf "%d %s of beer on the wall" (lineNumber - 1) bottles
 
-
-let getLine lineNumber =
+let verse lineNumber =  
     let bottles = if lineNumber = 1 then "bottle" else "bottles"
     let oneOrIt = if lineNumber = 1 then "it" else "one"
     if lineNumber = 0 then 
@@ -16,12 +15,10 @@ let getLine lineNumber =
     else
         sprintf "%d %s of beer on the wall, %d %s of beer.\nTake %s down and pass it around, %s.\n" lineNumber bottles lineNumber bottles oneOrIt (getLineEnding lineNumber)
 
-let verse lineNumber = 
-    getLine lineNumber
-
 let verses start finish =
-    let lines = [finish..start] 
-                |> List.map (fun lineNumber -> getLine lineNumber )
+    let range = if start > finish then [finish..start] else [start..finish]
+    let lines = range
+                |> List.map (fun lineNumber -> verse lineNumber )
                 |> List.rev
                 |> String.concat "\n"
 
